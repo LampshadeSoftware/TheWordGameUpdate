@@ -9,7 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginVC: UIViewController, FBSDKLoginButtonDelegate {
 
     // Outlets
     @IBOutlet weak var FBLoginButton: FBSDKLoginButton!
@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         FBLoginButton.delegate = self
+        FBLoginButton.readPermissions = ["email"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +37,14 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
         print("Successfully logged in with facebook...")
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
+            if err != nil {
+                print("Failed to start graph request:", err)
+                return
+            }
+            
+            print(result)
+        }
     }
 
 }

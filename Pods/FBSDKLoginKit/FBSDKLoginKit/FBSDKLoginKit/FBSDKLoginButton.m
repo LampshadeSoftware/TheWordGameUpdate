@@ -21,8 +21,8 @@
 #import "FBSDKCoreKit+Internal.h"
 #import "FBSDKLoginTooltipView.h"
 
-static const CGFloat kFBLogoSize = 16.0;
-static const CGFloat kFBLogoLeftMargin = 6.0;
+static const CGFloat kFBLogoSize = 20.0;
+static const CGFloat kFBLogoLeftMargin = 15.0;
 static const CGFloat kButtonHeight = 28.0;
 static const CGFloat kRightMargin = 8.0;
 static const CGFloat kPaddingBetweenLogoTitle = 8.0;
