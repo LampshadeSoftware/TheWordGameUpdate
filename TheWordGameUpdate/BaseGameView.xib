@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseGameView" customModule="TheWordGameUpdate" customModuleProvider="target">
             <connections>
+                <outlet property="currentWordHolder" destination="lb4-sw-ryL" id="THo-bi-Fnn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="49s-2U-3wF"/>
             </connections>
         </placeholder>
@@ -40,13 +41,11 @@
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.23529411759999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CURRENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av0-DC-HIb">
-                    <rect key="frame" x="0.0" y="194" width="375" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="33"/>
-                    <color key="textColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lb4-sw-ryL" userLabel="Current Word Holder">
+                    <rect key="frame" x="0.0" y="175" width="375" height="100"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="15.5" y="169.5"/>

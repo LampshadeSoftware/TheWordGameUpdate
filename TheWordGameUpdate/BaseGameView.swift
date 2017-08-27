@@ -10,7 +10,9 @@ import UIKit
 
 class BaseGameView: UIView {
 
+    // Outlets
     @IBOutlet var view: UIView!
+    @IBOutlet weak var currentWordHolder: UIView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

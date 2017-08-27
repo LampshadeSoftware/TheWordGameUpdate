@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1AEB4259DA6BD9EE9663F96B /* Pods_TheWordGameUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E42FC3EE44F25E42D8CC6 /* Pods_TheWordGameUpdate.framework */; };
+		851363971F537D7200115128 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851363961F537D7200115128 /* Word.swift */; };
+		851363991F537D7C00115128 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851363981F537D7C00115128 /* Tile.swift */; };
+		8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513639A1F5381C800115128 /* BaseGameVC.swift */; };
 		851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E819E1F4F4D9400BAF0ED /* AppDelegate.swift */; };
 		851E81A11F4F4D9400BAF0ED /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E81A01F4F4D9400BAF0ED /* LoginVC.swift */; };
 		851E81A41F4F4D9400BAF0ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851E81A21F4F4D9400BAF0ED /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		5AD34550068EB180B4E6E86C /* Pods-TheWordGameUpdate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWordGameUpdate.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheWordGameUpdate/Pods-TheWordGameUpdate.release.xcconfig"; sourceTree = "<group>"; };
 		7E0B92E8B96CF6955CD1A348 /* Pods-TheWordGameUpdate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWordGameUpdate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheWordGameUpdate/Pods-TheWordGameUpdate.debug.xcconfig"; sourceTree = "<group>"; };
+		851363961F537D7200115128 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		851363981F537D7C00115128 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		8513639A1F5381C800115128 /* BaseGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameVC.swift; sourceTree = "<group>"; };
 		851E819B1F4F4D9400BAF0ED /* TheWordGameUpdate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWordGameUpdate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851E819E1F4F4D9400BAF0ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		851E81A01F4F4D9400BAF0ED /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -98,6 +104,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		851363951F537D6700115128 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				851363961F537D7200115128 /* Word.swift */,
+				851363981F537D7C00115128 /* Tile.swift */,
+			);
+			name = Structures;
+			sourceTree = "<group>";
+		};
 		851E81921F4F4D9400BAF0ED = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +138,7 @@
 		851E819D1F4F4D9400BAF0ED /* TheWordGameUpdate */ = {
 			isa = PBXGroup;
 			children = (
+				851363951F537D6700115128 /* Structures */,
 				858C6DE91F4F4E69008CE70E /* Controllers */,
 				858C6DEC1F4F4E8A008CE70E /* Layouts */,
 				858C6DEA1F4F4E70008CE70E /* Other */,
@@ -156,6 +172,7 @@
 				851E81A01F4F4D9400BAF0ED /* LoginVC.swift */,
 				856914161F53388400275869 /* ZenVC.swift */,
 				856914181F53389000275869 /* TimeTrialVC.swift */,
+				8513639A1F5381C800115128 /* BaseGameVC.swift */,
 				856914291F53501C00275869 /* BaseGameView.swift */,
 			);
 			name = Controllers;
@@ -414,10 +431,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8569142A1F53501C00275869 /* BaseGameView.swift in Sources */,
+				8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */,
 				856914191F53389000275869 /* TimeTrialVC.swift in Sources */,
 				851E81A11F4F4D9400BAF0ED /* LoginVC.swift in Sources */,
+				851363991F537D7C00115128 /* Tile.swift in Sources */,
 				851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */,
 				856914171F53388400275869 /* ZenVC.swift in Sources */,
+				851363971F537D7200115128 /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,11 +39,11 @@ class LoginVC: UIViewController, FBSDKLoginButtonDelegate {
         print("Successfully logged in with facebook...")
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start { (connection, result, err) in
             if err != nil {
-                print("Failed to start graph request:", err)
+                print("Failed to start graph request:", err ?? "unknown error")
                 return
             }
             
-            print(result)
+            print(result ?? "unknown result")
         }
     }
 
