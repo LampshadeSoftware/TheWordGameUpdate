@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ENTER A WORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77W-8B-HWt">
-                    <rect key="frame" x="0.0" y="390" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="391" width="375" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="0.29411764709999999" green="0.36078431370000003" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,6 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="15.5" y="169.5"/>
         </view>
     </objects>
