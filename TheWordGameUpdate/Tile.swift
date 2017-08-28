@@ -28,6 +28,7 @@ class Tile: UIView {
         self.layer.backgroundColor = UIColor.white.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: self.frame.height/12)
         self.layer.cornerRadius = 15
+        self.alpha = 0
         
         // Label styling
         label.font = UIFont(name:"Avenir-Black", size: 40)

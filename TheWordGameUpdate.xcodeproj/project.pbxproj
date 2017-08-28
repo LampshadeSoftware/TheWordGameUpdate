@@ -107,8 +107,8 @@
 		851363951F537D6700115128 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				851363961F537D7200115128 /* Word.swift */,
 				851363981F537D7C00115128 /* Tile.swift */,
+				851363961F537D7200115128 /* Word.swift */,
 				856914291F53501C00275869 /* BaseGameView.swift */,
 			);
 			name = Structures;

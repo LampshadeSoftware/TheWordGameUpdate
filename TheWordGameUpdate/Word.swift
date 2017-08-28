@@ -11,7 +11,6 @@ import UIKit
 class Word: UIView {
     
     var letters: [Tile] = [Tile]()
-    var defaultLetterSize: Double!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,23 +21,41 @@ class Word: UIView {
     func updateVisuals(turnType: Int, index: Int){
         let numLetters = Double(letters.count)
         var currentDimension = Double(self.frame.width)/(1.1*numLetters - 0.1)
-        var xPos = currentDimension / 2.0
+        var xCenter = 0.0
         
-        if numLetters > 4 {
-            // When not using the default size
-        } else {
+        
+        // Alternates between the default dimension and the scaled dimension
+        if numLetters < 4 {
             currentDimension = Double(self.frame.width)/(1.1*4 - 0.1)
-            xPos += Double(4 - letters.count)*currentDimension*1.1/2.0
+            xCenter += Double(4 - letters.count)*currentDimension*1.1/2.0
+        } else {
+            
         }
         
-        let scaleDimension = currentDimension/100  // is a decimal value e.g. 0.8
+        // Adjusts the point so that its at the center and not on the left edge
+        xCenter += currentDimension/2.0
+        let scaleDimension = currentDimension/Double(letters[index].defaultDimension)  // A decimal value e.g. 0.8
         
-        // Cycles through each of the letters in the word
-        for index in 0..<letters.count {
-            let letter = letters[index]
-            letter.transform = CGAffineTransform(scaleX: CGFloat(scaleDimension), y: CGFloat(scaleDimension))
-            letter.center = CGPoint(x: xPos, y: 50)
-            xPos += currentDimension*1.1
+        // Puts the new tile in the right position for when its added in
+        if turnType == 0 || turnType == 2 {
+            letters[index].center.x = CGFloat(xCenter + Double(index)*currentDimension*1.1)
+        }
+        
+        UIView.animate(withDuration: 0.7) {
+            // Cycles through each of the letters in the word
+            for i in 0..<self.letters.count {
+                let letter = self.letters[i]
+                
+                letter.alpha = 1
+                letter.transform = CGAffineTransform(scaleX: CGFloat(scaleDimension), y: CGFloat(scaleDimension))
+                letter.center = CGPoint(x: xCenter, y: 50)
+                
+                if i != index{
+                    letter.removeIndicator()
+                }
+                
+                xCenter += currentDimension*1.1
+            }
         }
     }
     
@@ -57,6 +74,14 @@ class Word: UIView {
             letters.remove(at: index)
         }
         updateVisuals(turnType: 1, index: index)
+    }
+    
+    func swapLetter(letter: String, index: Int) {
+        
+    }
+    
+    func rearrangeLetters(newWord: String){
+        
     }
     
     

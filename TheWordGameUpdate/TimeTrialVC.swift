@@ -10,12 +10,12 @@ import UIKit
 
 class TimeTrialVC: BaseGameVC {
 
+    @IBAction func buttonPressed(_ sender: Any) {
+        baseGameView.currentWord.addLetter(letter: "A", index: 1)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        baseGameView.currentWord.addLetter(letter: "A", index: 0)
-        baseGameView.currentWord.addLetter(letter: "A", index: 0)
-        baseGameView.currentWord.addLetter(letter: "A", index: 0)
+
         baseGameView.currentWord.addLetter(letter: "A", index: 0)
         
     }
