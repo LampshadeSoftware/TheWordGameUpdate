@@ -119,6 +119,14 @@
                                     <action selector="buttonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="A6Q-Ib-Fea"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5I-dS-ueS">
+                                <rect key="frame" x="157" y="152" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Subtract"/>
+                                <connections>
+                                    <action selector="subButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="BLX-Xd-ogi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

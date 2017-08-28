@@ -13,10 +13,15 @@ class TimeTrialVC: BaseGameVC {
     @IBAction func buttonPressed(_ sender: Any) {
         baseGameView.currentWord.addLetter(letter: "A", index: 1)
     }
+    @IBAction func subButtonPressed(_ sender: Any) {
+        baseGameView.currentWord.removeLetter(index: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        baseGameView.currentWord.addLetter(letter: "A", index: 0)
+        baseGameView.currentWord.initLetter(letter: "A", index: 0)
+        baseGameView.currentWord.initLetter(letter: "B", index: 1)
+        baseGameView.currentWord.initLetter(letter: "C", index: 2)
         
     }
 

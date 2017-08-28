@@ -50,7 +50,7 @@ class Word: UIView {
                 letter.transform = CGAffineTransform(scaleX: CGFloat(scaleDimension), y: CGFloat(scaleDimension))
                 letter.center = CGPoint(x: xCenter, y: 50)
                 
-                if i != index{
+                if i != index  || (turnType == 1 || turnType == 3) {
                     letter.removeIndicator()
                 }
                 
@@ -71,8 +71,19 @@ class Word: UIView {
     
     func removeLetter(index: Int){
         if index < letters.count {
+            let tileToRemove = letters[index]
+            
             letters.remove(at: index)
+            
+            // Fades out the tile and removes it from the view
+            UIView.animate(withDuration: 0.5, animations: {
+                tileToRemove.alpha = 0
+                tileToRemove.center.y += CGFloat(tileToRemove.defaultDimension)*tileToRemove.transform.a*1.2
+            }) { (sucsess:Bool) in
+                tileToRemove.removeFromSuperview()
+            }
         }
+        
         updateVisuals(turnType: 1, index: index)
     }
     
@@ -82,6 +93,11 @@ class Word: UIView {
     
     func rearrangeLetters(newWord: String){
         
+    }
+    
+    func initLetter(letter: String, index: Int){
+        addLetter(letter: letter, index: index)
+        self.letters[index].removeIndicator()
     }
     
     
