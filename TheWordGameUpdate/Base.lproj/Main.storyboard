@@ -111,20 +111,28 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-uQ-1Em">
-                                <rect key="frame" x="76" y="95" width="223" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="A6Q-Ib-Fea"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5I-dS-ueS">
-                                <rect key="frame" x="157" y="152" width="60" height="30"/>
+                                <rect key="frame" x="137" y="92" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Subtract"/>
                                 <connections>
                                     <action selector="subButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="BLX-Xd-ogi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy1-cP-SNr">
+                                <rect key="frame" x="245" y="92" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Swap"/>
+                                <connections>
+                                    <action selector="swapButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="MEW-II-pNg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-uQ-1Em">
+                                <rect key="frame" x="29" y="92" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="A6Q-Ib-Fea"/>
                                 </connections>
                             </button>
                         </subviews>

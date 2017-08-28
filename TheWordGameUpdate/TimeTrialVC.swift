@@ -16,6 +16,10 @@ class TimeTrialVC: BaseGameVC {
     @IBAction func subButtonPressed(_ sender: Any) {
         baseGameView.currentWord.removeLetter(index: 0)
     }
+    @IBAction func swapButtonPressed(_ sender: Any) {
+        baseGameView.currentWord.swapLetter(letter: "O", index: 0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

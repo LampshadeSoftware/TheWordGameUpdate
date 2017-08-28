@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase initialization
         FirebaseApp.configure()
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return true
     }
     

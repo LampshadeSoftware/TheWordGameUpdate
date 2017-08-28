@@ -88,7 +88,24 @@ class Word: UIView {
     }
     
     func swapLetter(letter: String, index: Int) {
+        let oldTile = letters[index]
+        letters.remove(at: index)
         
+        UIView.animate(withDuration: 0.5, animations: {
+            oldTile.alpha = 0
+            oldTile.center.y -= CGFloat(oldTile.defaultDimension)*oldTile.transform.a
+        }) { (sucsess:Bool) in
+            oldTile.removeFromSuperview()
+        }
+        
+        let newLetter = Tile(letter: letter)
+        newLetter.center = oldTile.center
+        newLetter.center.y += CGFloat(oldTile.defaultDimension)*oldTile.transform.a * 2
+        newLetter.transform = oldTile.transform
+        newLetter.addIndicator()
+        self.addSubview(newLetter)
+        letters.insert(newLetter, at: index)
+        updateVisuals(turnType: 2, index: index)
     }
     
     func rearrangeLetters(newWord: String){
