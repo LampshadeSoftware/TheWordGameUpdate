@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Anything that goes in this class is used in ALL gamemodes
+// HAS ACCESS TO: baseGameView
 class BaseGameVC: UIViewController {
     
     var baseGameView: BaseGameView!

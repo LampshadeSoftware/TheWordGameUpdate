@@ -20,16 +20,15 @@ class TimeTrialVC: BaseGameVC {
         baseGameView.currentWord.swapLetter(letter: "O", index: 0)
     }
     @IBAction func rearrButtonPressed(_ sender: Any) {
-        baseGameView.currentWord.rearrangeLetters(newWord: "BCAAO")
+        baseGameView.currentWord.rearrangeLetters(to: "BCAAO")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        baseGameView.currentWord.initLetter(letter: "C", index: 0)
+        baseGameView.currentWord.initLetter(letter: "B", index: 0)
         baseGameView.currentWord.initLetter(letter: "A", index: 0)
-        baseGameView.currentWord.initLetter(letter: "B", index: 1)
-        baseGameView.currentWord.initLetter(letter: "C", index: 2)
-        
     }
 
     override func didReceiveMemoryWarning() {

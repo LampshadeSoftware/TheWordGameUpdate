@@ -107,9 +107,10 @@ class Word: UIView {
         updateVisuals(turnType: 2, index: index)
     }
     
-    func rearrangeLetters(newWord: String){
+    func rearrangeLetters(to: String){
         var newLetters = [Tile]()
-        for newLetter in newWord.characters {
+        // rearranges the letters in the current word array to match the new word
+        for newLetter in to.characters {
             for letter in self.letters{
                 if letter.label.text! == String(describing: newLetter) {
                     newLetters.append(letter)
@@ -125,6 +126,4 @@ class Word: UIView {
         addLetter(letter: letter, index: index)
         self.letters[index].removeIndicator()
     }
-    
-    
 }

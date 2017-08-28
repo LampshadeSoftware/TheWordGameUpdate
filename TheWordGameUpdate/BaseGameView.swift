@@ -8,20 +8,30 @@
 
 import UIKit
 
+// Anything that goes in this class is used in ALL gamemodes
+// HAS ACCESS TO: last word, current word, enter word text field
 class BaseGameView: UIView {
 
     // Outlets
     @IBOutlet var view: UIView!
+    @IBOutlet weak var lastWord: UILabel!
     @IBOutlet weak var currentWord: Word!
+    @IBOutlet weak var enterWordTextField: UITextField!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        nibSetup()
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup(){
         nibSetup()
+        currentWord.center.y = (lastWord.center.y + enterWordTextField.center.y)/2
+        enterWordTextField.becomeFirstResponder()
     }
     
     func nibSetup(){
