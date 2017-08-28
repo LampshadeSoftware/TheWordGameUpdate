@@ -14,7 +14,6 @@ class Word: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
     }
     
     // TURN TYPES: (-1: init), (0: add), (1: rem.), (2: swap), (3: rearr.)
@@ -109,7 +108,17 @@ class Word: UIView {
     }
     
     func rearrangeLetters(newWord: String){
-        
+        var newLetters = [Tile]()
+        for newLetter in newWord.characters {
+            for letter in self.letters{
+                if letter.label.text! == String(describing: newLetter) {
+                    newLetters.append(letter)
+                    self.letters.remove(at: self.letters.index(of: letter)!)
+                }
+            }
+        }
+        self.letters = newLetters
+        updateVisuals(turnType: 3, index: 0)
     }
     
     func initLetter(letter: String, index: Int){

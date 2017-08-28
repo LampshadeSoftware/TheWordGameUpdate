@@ -19,6 +19,9 @@ class TimeTrialVC: BaseGameVC {
     @IBAction func swapButtonPressed(_ sender: Any) {
         baseGameView.currentWord.swapLetter(letter: "O", index: 0)
     }
+    @IBAction func rearrButtonPressed(_ sender: Any) {
+        baseGameView.currentWord.rearrangeLetters(newWord: "BCAAO")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

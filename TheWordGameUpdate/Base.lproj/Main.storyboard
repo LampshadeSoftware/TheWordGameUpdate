@@ -135,6 +135,14 @@
                                     <action selector="buttonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="A6Q-Ib-Fea"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZU-nB-Yzf">
+                                <rect key="frame" x="137" y="36" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Rearrange"/>
+                                <connections>
+                                    <action selector="rearrButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="pNJ-YJ-xdZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
