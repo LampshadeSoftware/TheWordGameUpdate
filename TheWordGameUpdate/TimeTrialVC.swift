@@ -9,11 +9,14 @@
 import UIKit
 
 class TimeTrialVC: BaseGameVC {
-    
-    var baseGameView: BaseGameView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        baseGameView.currentWord.addLetter(letter: "A", index: 0)
+        baseGameView.currentWord.addLetter(letter: "A", index: 0)
+        baseGameView.currentWord.addLetter(letter: "A", index: 0)
+        baseGameView.currentWord.addLetter(letter: "A", index: 0)
         
     }
 

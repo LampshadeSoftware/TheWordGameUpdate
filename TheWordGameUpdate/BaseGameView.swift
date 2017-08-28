@@ -12,8 +12,8 @@ class BaseGameView: UIView {
 
     // Outlets
     @IBOutlet var view: UIView!
-    @IBOutlet weak var currentWordHolder: UIView!
-
+    @IBOutlet weak var currentWord: Word!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()

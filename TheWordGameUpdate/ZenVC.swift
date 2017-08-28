@@ -9,8 +9,6 @@
 import UIKit
 
 class ZenVC: BaseGameVC {
-
-    var baseGameView: BaseGameView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

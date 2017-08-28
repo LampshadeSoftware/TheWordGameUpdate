@@ -109,6 +109,7 @@
 			children = (
 				851363961F537D7200115128 /* Word.swift */,
 				851363981F537D7C00115128 /* Tile.swift */,
+				856914291F53501C00275869 /* BaseGameView.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -173,7 +174,6 @@
 				856914161F53388400275869 /* ZenVC.swift */,
 				856914181F53389000275869 /* TimeTrialVC.swift */,
 				8513639A1F5381C800115128 /* BaseGameVC.swift */,
-				856914291F53501C00275869 /* BaseGameView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

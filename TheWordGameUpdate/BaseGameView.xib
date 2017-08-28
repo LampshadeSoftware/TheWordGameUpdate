@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseGameView" customModule="TheWordGameUpdate" customModuleProvider="target">
             <connections>
-                <outlet property="currentWordHolder" destination="lb4-sw-ryL" id="THo-bi-Fnn"/>
+                <outlet property="currentWord" destination="eKW-Nz-37U" id="OCL-h7-vpC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="49s-2U-3wF"/>
             </connections>
         </placeholder>
@@ -41,10 +41,10 @@
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.23529411759999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lb4-sw-ryL" userLabel="Current Word Holder">
-                    <rect key="frame" x="0.0" y="175" width="375" height="100"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKW-Nz-37U" customClass="Word" customModule="TheWordGameUpdate" customModuleProvider="target">
+                    <rect key="frame" x="16" y="174" width="343" height="100"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
