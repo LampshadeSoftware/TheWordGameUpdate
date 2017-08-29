@@ -9,9 +9,10 @@
 import UIKit
 
 // Anything that goes in this class is used in ALL gamemodes
-// HAS ACCESS TO: baseGameView
+// HAS ACCESS TO: baseGameView, all turns
 class BaseGameVC: UIViewController {
     
+    // Variables
     var baseGameView: BaseGameView!
 
     override func viewDidLoad() {

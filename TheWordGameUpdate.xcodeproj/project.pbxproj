@@ -23,6 +23,8 @@
 		8569142A1F53501C00275869 /* BaseGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856914291F53501C00275869 /* BaseGameView.swift */; };
 		8569142C1F53503000275869 /* BaseGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8569142B1F53503000275869 /* BaseGameView.xib */; };
 		858C6DEF1F4F51B3008CE70E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 858C6DEE1F4F51B3008CE70E /* GoogleService-Info.plist */; };
+		85D641101F54E35D0070D7DC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D6410F1F54E35D0070D7DC /* Utils.swift */; };
+		85D641121F5500D60070D7DC /* WordGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D641111F5500D60070D7DC /* WordGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		8569142B1F53503000275869 /* BaseGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseGameView.xib; sourceTree = "<group>"; };
 		858C6DED1F4F4F7E008CE70E /* TheWordGameUpdate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheWordGameUpdate.entitlements; sourceTree = "<group>"; };
 		858C6DEE1F4F51B3008CE70E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		85D6410F1F54E35D0070D7DC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		85D641111F5500D60070D7DC /* WordGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGame.swift; sourceTree = "<group>"; };
 		9A7E42FC3EE44F25E42D8CC6 /* Pods_TheWordGameUpdate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheWordGameUpdate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,9 +111,11 @@
 		851363951F537D6700115128 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
+				856914291F53501C00275869 /* BaseGameView.swift */,
 				851363981F537D7C00115128 /* Tile.swift */,
 				851363961F537D7200115128 /* Word.swift */,
-				856914291F53501C00275869 /* BaseGameView.swift */,
+				85D641111F5500D60070D7DC /* WordGame.swift */,
+				85D6410F1F54E35D0070D7DC /* Utils.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -432,10 +438,12 @@
 			files = (
 				8569142A1F53501C00275869 /* BaseGameView.swift in Sources */,
 				8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */,
+				85D641101F54E35D0070D7DC /* Utils.swift in Sources */,
 				856914191F53389000275869 /* TimeTrialVC.swift in Sources */,
 				851E81A11F4F4D9400BAF0ED /* LoginVC.swift in Sources */,
 				851363991F537D7C00115128 /* Tile.swift in Sources */,
 				851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */,
+				85D641121F5500D60070D7DC /* WordGame.swift in Sources */,
 				856914171F53388400275869 /* ZenVC.swift in Sources */,
 				851363971F537D7200115128 /* Word.swift in Sources */,
 			);

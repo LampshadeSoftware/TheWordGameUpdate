@@ -23,12 +23,10 @@ class Word: UIView {
         var xCenter = 0.0
         
         
-        // Alternates between the default dimension and the scaled dimension
+        // Sets to default size if less than 4 letters
         if numLetters < 4 {
             currentDimension = Double(self.frame.width)/(1.1*4 - 0.1)
             xCenter += Double(4 - letters.count)*currentDimension*1.1/2.0
-        } else {
-            
         }
         
         // Adjusts the point so that its at the center and not on the left edge
@@ -58,6 +56,7 @@ class Word: UIView {
         }
     }
     
+    // MARK: Functions for modifying the word with the different types of move
     func addLetter(letter: String, index: Int){
         if index <= letters.count {
             let newLetter = Tile(letter: letter)

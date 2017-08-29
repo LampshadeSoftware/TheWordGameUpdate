@@ -39,5 +39,7 @@ class BaseGameView: UIView {
         self.addSubview(view)
         view.frame = self.bounds
     }
+    
+    
 
 }
