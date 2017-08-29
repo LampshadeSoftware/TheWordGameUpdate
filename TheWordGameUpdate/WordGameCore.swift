@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WordGame: NSObject {
+/*class WordGame: NSObject {
     
     var turns: [Turn]
     var errorLog: String
@@ -236,7 +236,7 @@ class WordGame: NSObject {
             return ["failed"]
         }
     }
-}
+}*/
 
 class Turn: NSObject {
     

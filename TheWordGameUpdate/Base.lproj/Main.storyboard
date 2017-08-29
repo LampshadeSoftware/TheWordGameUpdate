@@ -44,7 +44,7 @@
                         <viewControllerLayoutGuide type="top" id="3Ns-sh-njw"/>
                         <viewControllerLayoutGuide type="bottom" id="ZKB-7g-E1C"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="M9a-GD-12n">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="M9a-GD-12n">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16769868900000001" green="0.2064031217" blue="0.28269406580000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="HOME" id="NHH-pg-tcn">
                         <barButtonItem key="backBarButtonItem" title=" " id="kWL-ZC-Sbm"/>
@@ -105,7 +105,7 @@
                         <viewControllerLayoutGuide type="top" id="BKw-ja-YzY"/>
                         <viewControllerLayoutGuide type="bottom" id="hrf-aR-68b"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DJG-W2-Af3">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="DJG-W2-Af3">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -128,7 +128,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16769868900000001" green="0.2064031217" blue="0.28269406580000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExD-WQ-oqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,11 +202,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3r6-1h-z0c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CUc-GO-hof">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="CUc-GO-hof">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.94117647058823528" green="0.5607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.94117647059999998" green="0.56078431370000004" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                             <color key="textColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
