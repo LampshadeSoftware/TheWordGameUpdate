@@ -23,8 +23,10 @@
 		8569142A1F53501C00275869 /* BaseGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856914291F53501C00275869 /* BaseGameView.swift */; };
 		8569142C1F53503000275869 /* BaseGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8569142B1F53503000275869 /* BaseGameView.xib */; };
 		858C6DEF1F4F51B3008CE70E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 858C6DEE1F4F51B3008CE70E /* GoogleService-Info.plist */; };
-		85D641101F54E35D0070D7DC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D6410F1F54E35D0070D7DC /* Utils.swift */; };
-		85D641121F5500D60070D7DC /* WordGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D641111F5500D60070D7DC /* WordGame.swift */; };
+		85D641121F5500D60070D7DC /* WordGameCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D641111F5500D60070D7DC /* WordGameCore.swift */; };
+		85F4A50B1F5599C700FBFABC /* common.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85F4A5091F5599C700FBFABC /* common.txt */; };
+		85F4A50C1F5599C700FBFABC /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 85F4A50A1F5599C700FBFABC /* dictionary.txt */; };
+		85F4A50E1F559C8800FBFABC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4A50D1F559C8800FBFABC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +71,10 @@
 		8569142B1F53503000275869 /* BaseGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseGameView.xib; sourceTree = "<group>"; };
 		858C6DED1F4F4F7E008CE70E /* TheWordGameUpdate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheWordGameUpdate.entitlements; sourceTree = "<group>"; };
 		858C6DEE1F4F51B3008CE70E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		85D6410F1F54E35D0070D7DC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		85D641111F5500D60070D7DC /* WordGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGame.swift; sourceTree = "<group>"; };
+		85D641111F5500D60070D7DC /* WordGameCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGameCore.swift; sourceTree = "<group>"; };
+		85F4A5091F5599C700FBFABC /* common.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common.txt; sourceTree = "<group>"; };
+		85F4A50A1F5599C700FBFABC /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		85F4A50D1F559C8800FBFABC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9A7E42FC3EE44F25E42D8CC6 /* Pods_TheWordGameUpdate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheWordGameUpdate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,8 +118,7 @@
 				856914291F53501C00275869 /* BaseGameView.swift */,
 				851363981F537D7C00115128 /* Tile.swift */,
 				851363961F537D7200115128 /* Word.swift */,
-				85D641111F5500D60070D7DC /* WordGame.swift */,
-				85D6410F1F54E35D0070D7DC /* Utils.swift */,
+				85D641111F5500D60070D7DC /* WordGameCore.swift */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -187,6 +190,9 @@
 		858C6DEA1F4F4E70008CE70E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				85F4A5091F5599C700FBFABC /* common.txt */,
+				85F4A50A1F5599C700FBFABC /* dictionary.txt */,
+				85F4A50D1F559C8800FBFABC /* Extensions.swift */,
 				851E819E1F4F4D9400BAF0ED /* AppDelegate.swift */,
 			);
 			name = Other;
@@ -341,7 +347,9 @@
 			files = (
 				851E81A91F4F4D9400BAF0ED /* LaunchScreen.storyboard in Resources */,
 				858C6DEF1F4F51B3008CE70E /* GoogleService-Info.plist in Resources */,
+				85F4A50C1F5599C700FBFABC /* dictionary.txt in Resources */,
 				851E81A61F4F4D9400BAF0ED /* Assets.xcassets in Resources */,
+				85F4A50B1F5599C700FBFABC /* common.txt in Resources */,
 				851E81A41F4F4D9400BAF0ED /* Main.storyboard in Resources */,
 				8569142C1F53503000275869 /* BaseGameView.xib in Resources */,
 			);
@@ -438,12 +446,12 @@
 			files = (
 				8569142A1F53501C00275869 /* BaseGameView.swift in Sources */,
 				8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */,
-				85D641101F54E35D0070D7DC /* Utils.swift in Sources */,
 				856914191F53389000275869 /* TimeTrialVC.swift in Sources */,
 				851E81A11F4F4D9400BAF0ED /* LoginVC.swift in Sources */,
 				851363991F537D7C00115128 /* Tile.swift in Sources */,
+				85F4A50E1F559C8800FBFABC /* Extensions.swift in Sources */,
 				851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */,
-				85D641121F5500D60070D7DC /* WordGame.swift in Sources */,
+				85D641121F5500D60070D7DC /* WordGameCore.swift in Sources */,
 				856914171F53388400275869 /* ZenVC.swift in Sources */,
 				851363971F537D7200115128 /* Word.swift in Sources */,
 			);

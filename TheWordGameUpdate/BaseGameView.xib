@@ -52,7 +52,7 @@
                     <rect key="frame" x="16" y="322" width="343" height="21"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
-                    <color key="textColor" red="0.87450980389999999" green="0.39399031909999999" blue="0.37616357890000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.87450980389999999" green="0.39399031909999999" blue="0.37616357890000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
