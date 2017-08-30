@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Word: UIView {
+class CurrentWord: UIView {
     
     var letters: [Tile] = [Tile]()
     

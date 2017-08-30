@@ -9,22 +9,13 @@
 import UIKit
 
 class TimeTrialVC: BaseGameVC {
-
-    @IBAction func buttonPressed(_ sender: Any) {
-        baseGameView.currentWord.addLetter(letter: "A", index: 1)
-    }
-    @IBAction func subButtonPressed(_ sender: Any) {
-        baseGameView.currentWord.removeLetter(index: 0)
-    }
-    @IBAction func swapButtonPressed(_ sender: Any) {
-        baseGameView.currentWord.swapLetter(letter: "O", index: 0)
-    }
-    @IBAction func rearrButtonPressed(_ sender: Any) {
-        baseGameView.currentWord.rearrangeLetters(to: "BCAAO")
-    }
+    
+    // Outlets
+    @IBOutlet weak var submitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        childSubmitButton = submitButton
 
         baseGameView.currentWord.initLetter(letter: "C", index: 0)
         baseGameView.currentWord.initLetter(letter: "B", index: 0)

@@ -13,6 +13,7 @@
                 <outlet property="currentWord" destination="eKW-Nz-37U" id="OCL-h7-vpC"/>
                 <outlet property="enterWordTextField" destination="77W-8B-HWt" id="uw0-Aa-sto"/>
                 <outlet property="lastWord" destination="5px-SD-HMA" id="ThR-bh-cdo"/>
+                <outlet property="sysLog" destination="QEP-5X-BbU" id="ic3-it-Ykk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="49s-2U-3wF"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKW-Nz-37U" customClass="Word" customModule="TheWordGameUpdate" customModuleProvider="target">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKW-Nz-37U" customClass="CurrentWord" customModule="TheWordGameUpdate" customModuleProvider="target">
                     <rect key="frame" x="16" y="154" width="343" height="100"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

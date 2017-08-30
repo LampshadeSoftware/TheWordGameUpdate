@@ -10,8 +10,15 @@ import UIKit
 
 class ZenVC: BaseGameVC {
     
+    // Outlets
+    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var hintButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        childSubmitButton = submitButton
+        childHintButton = hintButton
     }
 
     override func didReceiveMemoryWarning() {

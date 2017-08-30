@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AEB4259DA6BD9EE9663F96B /* Pods_TheWordGameUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E42FC3EE44F25E42D8CC6 /* Pods_TheWordGameUpdate.framework */; };
-		851363971F537D7200115128 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851363961F537D7200115128 /* Word.swift */; };
+		851363971F537D7200115128 /* CurrentWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851363961F537D7200115128 /* CurrentWord.swift */; };
 		851363991F537D7C00115128 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851363981F537D7C00115128 /* Tile.swift */; };
 		8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8513639A1F5381C800115128 /* BaseGameVC.swift */; };
 		851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E819E1F4F4D9400BAF0ED /* AppDelegate.swift */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		5AD34550068EB180B4E6E86C /* Pods-TheWordGameUpdate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWordGameUpdate.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheWordGameUpdate/Pods-TheWordGameUpdate.release.xcconfig"; sourceTree = "<group>"; };
 		7E0B92E8B96CF6955CD1A348 /* Pods-TheWordGameUpdate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWordGameUpdate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheWordGameUpdate/Pods-TheWordGameUpdate.debug.xcconfig"; sourceTree = "<group>"; };
-		851363961F537D7200115128 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		851363961F537D7200115128 /* CurrentWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWord.swift; sourceTree = "<group>"; };
 		851363981F537D7C00115128 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		8513639A1F5381C800115128 /* BaseGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameVC.swift; sourceTree = "<group>"; };
 		851E819B1F4F4D9400BAF0ED /* TheWordGameUpdate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWordGameUpdate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +117,7 @@
 			children = (
 				856914291F53501C00275869 /* BaseGameView.swift */,
 				851363981F537D7C00115128 /* Tile.swift */,
-				851363961F537D7200115128 /* Word.swift */,
+				851363961F537D7200115128 /* CurrentWord.swift */,
 				85D641111F5500D60070D7DC /* WordGameCore.swift */,
 			);
 			name = Structures;
@@ -453,7 +453,7 @@
 				851E819F1F4F4D9400BAF0ED /* AppDelegate.swift in Sources */,
 				85D641121F5500D60070D7DC /* WordGameCore.swift in Sources */,
 				856914171F53388400275869 /* ZenVC.swift in Sources */,
-				851363971F537D7200115128 /* Word.swift in Sources */,
+				851363971F537D7200115128 /* CurrentWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

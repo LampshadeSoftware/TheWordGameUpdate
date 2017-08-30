@@ -15,8 +15,9 @@ class BaseGameView: UIView {
     // Outlets
     @IBOutlet var view: UIView!
     @IBOutlet weak var lastWord: UILabel!
-    @IBOutlet weak var currentWord: Word!
+    @IBOutlet weak var currentWord: CurrentWord!
     @IBOutlet weak var enterWordTextField: UITextField!
+    @IBOutlet weak var sysLog: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +31,6 @@ class BaseGameView: UIView {
     
     func setup(){
         nibSetup()
-        currentWord.center.y = (lastWord.center.y + enterWordTextField.center.y)/2
         enterWordTextField.becomeFirstResponder()
     }
     

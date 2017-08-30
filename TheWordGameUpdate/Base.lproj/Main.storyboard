@@ -44,7 +44,7 @@
                         <viewControllerLayoutGuide type="top" id="3Ns-sh-njw"/>
                         <viewControllerLayoutGuide type="bottom" id="ZKB-7g-E1C"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="M9a-GD-12n">
+                    <view key="view" contentMode="scaleToFill" id="M9a-GD-12n">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -105,7 +105,7 @@
                         <viewControllerLayoutGuide type="top" id="BKw-ja-YzY"/>
                         <viewControllerLayoutGuide type="bottom" id="hrf-aR-68b"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="DJG-W2-Af3">
+                    <view key="view" contentMode="scaleToFill" id="DJG-W2-Af3">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -130,6 +130,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16769868900000001" green="0.2064031217" blue="0.28269406580000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="hintButton" destination="LBV-1p-0fl" id="mai-0M-fKo"/>
+                        <outlet property="submitButton" destination="Vnl-cL-lTs" id="E4e-vA-dg5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExD-WQ-oqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,41 +160,12 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5I-dS-ueS">
-                                <rect key="frame" x="103" y="92" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Subtract"/>
-                                <connections>
-                                    <action selector="subButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="BLX-Xd-ogi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wy1-cP-SNr">
-                                <rect key="frame" x="173" y="92" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Swap"/>
-                                <connections>
-                                    <action selector="swapButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="MEW-II-pNg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-uQ-1Em">
-                                <rect key="frame" x="63" y="92" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="A6Q-Ib-Fea"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZU-nB-Yzf">
-                                <rect key="frame" x="225" y="92" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Rearrange"/>
-                                <connections>
-                                    <action selector="rearrButtonPressed:" destination="Ohf-OB-vHS" eventType="touchUpInside" id="pNJ-YJ-xdZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="submitButton" destination="V5S-76-MHQ" id="AaM-JI-El7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vud-rm-0ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,7 +177,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3r6-1h-z0c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="CUc-GO-hof">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="CUc-GO-hof">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
