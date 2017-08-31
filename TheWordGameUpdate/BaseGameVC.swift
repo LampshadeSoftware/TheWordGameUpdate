@@ -49,8 +49,14 @@ class BaseGameVC: UIViewController {
             }
         }
         sysLog.text = activeGame.errorLog
+        sysLog.textColor = UIColor(colorLiteralRed: 223/255, green: 100/255, blue: 96/255, alpha: 1)
         lastWord.text = activeGame.getLastWord().uppercased()
         enterWordTextField.text = ""
+    }
+    func getHint() {
+        let numPlays = WordGame.numPlays(on: activeGame.getCurrentWord())
+        sysLog.text = "There are " + String(numPlays) + " potential plays on " + activeGame.getCurrentWord().uppercased()
+        sysLog.textColor = UIColor(colorLiteralRed: 122/255, green: 223/255, blue: 129/255, alpha: 1)
     }
 
     override func viewDidLoad() {

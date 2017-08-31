@@ -18,6 +18,9 @@ class ZenVC: BaseGameVC {
     @IBAction func submitButtonPressed(_ sender: Any) {
         submit()
     }
+    @IBAction func hintButtonPressed(_ sender: Any) {
+        getHint()
+    }
     
     
     override func viewDidLoad() {
