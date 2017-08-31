@@ -24,6 +24,7 @@ class BaseGameVC: UIViewController {
     var childSubmitButton: UIButton!
     var childHintButton: UIButton!
     var keyboardHeight: CGFloat!
+    var currentHint: String = ""
     
     // Functions
     func startGame(){
@@ -35,6 +36,8 @@ class BaseGameVC: UIViewController {
     func submit(){
         guard let playedWord = enterWordTextField.text else { return }
         let move = activeGame.submitWord(playedWord)
+        
+        // If the move is valid
         if move >= 0 {
             let type: Int = move / 100
             let index = move % 100
@@ -47,15 +50,19 @@ class BaseGameVC: UIViewController {
             } else { // type == 3
                 currentWord.rearrangeLetters(to: playedWord)
             }
+            currentHint = ""
+            lastWord.text = activeGame.getLastWord().uppercased()
         }
         sysLog.text = activeGame.errorLog
         sysLog.textColor = UIColor(colorLiteralRed: 223/255, green: 100/255, blue: 96/255, alpha: 1)
-        lastWord.text = activeGame.getLastWord().uppercased()
         enterWordTextField.text = ""
     }
     func getHint() {
-        let numPlays = WordGame.numPlays(on: activeGame.getCurrentWord())
-        sysLog.text = "There are " + String(numPlays) + " potential plays on " + activeGame.getCurrentWord().uppercased()
+        if currentHint.characters.count == 0{
+            let numPlays = WordGame.numPlays(on: activeGame.getCurrentWord())
+            currentHint = "There are " + String(numPlays) + " potential plays on " + activeGame.getCurrentWord().uppercased()
+        }
+        sysLog.text = currentHint
         sysLog.textColor = UIColor(colorLiteralRed: 122/255, green: 223/255, blue: 129/255, alpha: 1)
     }
 
