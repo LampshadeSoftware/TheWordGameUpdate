@@ -117,6 +117,9 @@
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="eb1-5r-tZS" eventType="touchUpInside" id="6Ni-GH-j3W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBV-1p-0fl">
                                 <rect key="frame" x="0.0" y="337" width="188" height="50"/>

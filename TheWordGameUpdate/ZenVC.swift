@@ -14,11 +14,18 @@ class ZenVC: BaseGameVC {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var hintButton: UIButton!
     
+    // Actions
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        submit()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         childSubmitButton = submitButton
         childHintButton = hintButton
+        
+        startGame()
     }
 
     override func didReceiveMemoryWarning() {

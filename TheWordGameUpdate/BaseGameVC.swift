@@ -9,7 +9,7 @@
 import UIKit
 
 // Anything that goes in this class is used in ALL gamemodes
-// HAS ACCESS TO: baseGameView, all turns
+// RUNS EVERYTHING
 class BaseGameVC: UIViewController {
     
     // Variables from the BaseGameView
@@ -20,9 +20,36 @@ class BaseGameVC: UIViewController {
     var sysLog: UILabel!
     
     // Variables
+    var activeGame: WordGame!
     var childSubmitButton: UIButton!
     var childHintButton: UIButton!
     var keyboardHeight: CGFloat!
+    
+    // Functions
+    func startGame(){
+        activeGame = WordGame()
+        for letter in Array(activeGame.getCurrentWord().characters).reversed() {
+            currentWord.initLetter(letter: String(letter).uppercased(), index: 0)
+        }
+    }
+    func submit(){
+        guard let playedWord = enterWordTextField.text else { return }
+        let move = activeGame.submitWord(playedWord)
+        if move >= 0 {
+            let type: Int = move / 100
+            let index = move % 100
+            if type == 0 {
+                currentWord.addLetter(letter: playedWord[index], index: index)
+            } else if type == 1 {
+                currentWord.removeLetter(index: index)
+            } else if type == 2 {
+                currentWord.swapLetter(letter: playedWord[index], index: index)
+            } else { // type == 3
+                currentWord.rearrangeLetters(to: playedWord)
+            }
+        }
+        enterWordTextField.text = ""
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
