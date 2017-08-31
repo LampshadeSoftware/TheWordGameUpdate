@@ -31,7 +31,7 @@ class CurrentWord: UIView {
         
         // Adjusts the point so that its at the center and not on the left edge
         xCenter += currentDimension/2.0
-        let scaleDimension = currentDimension/Double(letters[index].defaultDimension)  // A decimal value e.g. 0.8
+        let scaleDimension = currentDimension/Double(letters[0].defaultDimension)  // A decimal value e.g. 0.8
         
         // Puts the new tile in the right position for when its added in
         if turnType == 0 || turnType == 2 {
@@ -81,7 +81,6 @@ class CurrentWord: UIView {
                 tileToRemove.removeFromSuperview()
             }
         }
-        
         updateVisuals(turnType: 1, index: index)
     }
     

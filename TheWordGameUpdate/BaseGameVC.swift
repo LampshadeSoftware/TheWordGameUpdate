@@ -49,6 +49,7 @@ class BaseGameVC: UIViewController {
             }
         }
         sysLog.text = activeGame.errorLog
+        lastWord.text = activeGame.getLastWord()
         enterWordTextField.text = ""
     }
 
