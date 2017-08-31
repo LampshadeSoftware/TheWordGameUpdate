@@ -24,7 +24,9 @@ class ZenVC: BaseGameVC {
         super.viewDidLoad()
         childSubmitButton = submitButton
         childHintButton = hintButton
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         startGame()
     }
 

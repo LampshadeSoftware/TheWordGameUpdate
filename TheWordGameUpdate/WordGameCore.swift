@@ -11,11 +11,13 @@ import Foundation
 class WordGame: NSObject {
     
     var turns: [Turn]
+    var errorLog: String
     
     static var dictionary = WordGame.generateDictionary()
     static var common = WordGame.generateCommons()
     
     override init() {
+        errorLog = ""
         turns = [Turn]()
         turns.append(Turn(playedWord: WordGame.generateStartWord(), playedByID: ""))
     }
@@ -244,7 +246,6 @@ class WordGame: NSObject {
     }
     
     func submitWord(_ word: String) -> Int {
-        var errorLog = ""
         let wordLower = word.lowercased()
         let code = isValidPlay(wordLower, on: self.getCurrentWord(), last: self.getLastWord())
         switch code {

@@ -48,6 +48,7 @@ class BaseGameVC: UIViewController {
                 currentWord.rearrangeLetters(to: playedWord)
             }
         }
+        sysLog.text = activeGame.errorLog
         enterWordTextField.text = ""
     }
 
