@@ -26,11 +26,23 @@ class BaseGameVC: UIViewController {
     var keyboardHeight: CGFloat!
     var currentHint: String = ""
     
+    // Actions
+    func currentWordPressed(_ sender: UITapGestureRecognizer) {
+        if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: activeGame.getCurrentWord()) {
+            let ref: UIReferenceLibraryViewController = UIReferenceLibraryViewController(term: activeGame.getCurrentWord())
+            self.present(ref, animated: true, completion: nil)
+        }
+    }
+    
     // Functions
     func startGame(){
-        activeGame = WordGame()
-        for letter in Array(activeGame.getCurrentWord().characters).reversed() {
-            currentWord.initLetter(letter: String(letter).uppercased(), index: 0)
+        if activeGame == nil {
+            activeGame = WordGame()
+            for letter in Array(activeGame.getCurrentWord().characters).reversed() {
+                currentWord.initLetter(letter: String(letter).uppercased(), index: 0)
+            }
+            // Makes the current word clickable
+            currentWord.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentWordPressed(_:))))
         }
     }
     func submit(){
@@ -83,6 +95,8 @@ class BaseGameVC: UIViewController {
         // Sets the enter word buttons and fields to be right above the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(BaseGameVC.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
+    
+    override func view
     
     // Makes sure the positions of every element are flush with other elements
     func keyboardWillShow(_ notification: Notification) {
