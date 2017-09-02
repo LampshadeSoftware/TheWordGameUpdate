@@ -25,6 +25,7 @@ class BaseGameVC: UIViewController {
     var childHintButton: UIButton!
     var keyboardHeight: CGFloat!
     var currentHint: String = ""
+    var activityIndicator: UIActivityIndicatorView!
     
     // Actions
     func currentWordPressed(_ sender: UITapGestureRecognizer) {
@@ -42,12 +43,17 @@ class BaseGameVC: UIViewController {
     // Functions
     func startGame(){
         if activeGame == nil {
-            activeGame = WordGame()
-            for letter in Array(activeGame.getCurrentWord().characters).reversed() {
-                currentWord.initLetter(letter: String(letter).uppercased(), index: 0)
+            self.activityIndicator.center = self.currentWord.center
+            self.activityIndicator.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                self.activeGame = WordGame()
+                for letter in Array(self.activeGame.getCurrentWord().characters).reversed() {
+                    self.currentWord.initLetter(letter: String(letter).uppercased(), index: 0)
+                }
+                // Makes the current word clickable
+                self.currentWord.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.currentWordPressed(_:))))
+                self.activityIndicator.stopAnimating()
             }
-            // Makes the current word clickable
-            currentWord.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentWordPressed(_:))))
         }
     }
     func submit(){
@@ -75,12 +81,18 @@ class BaseGameVC: UIViewController {
         enterWordTextField.text = ""
     }
     func getHint() {
-        if currentHint.characters.count == 0{
-            let numPlays = WordGame.numPlays(on: activeGame.getCurrentWord())
-            currentHint = "There are " + String(numPlays) + " potential plays on " + activeGame.getCurrentWord().uppercased()
+        self.activityIndicator.center = self.sysLog.center
+        self.activityIndicator.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            if self.currentHint.characters.count == 0{
+                let numPlays = WordGame.numPlays(on: self.activeGame.getCurrentWord())
+                self.currentHint = "There are " + String(numPlays) + " potential plays on " + self.activeGame.getCurrentWord().uppercased()
+            }
+            self.sysLog.text = self.currentHint
+            self.sysLog.textColor = UIColor(colorLiteralRed: 122/255, green: 223/255, blue: 129/255, alpha: 1)
+            self.activityIndicator.stopAnimating()
         }
-        sysLog.text = currentHint
-        sysLog.textColor = UIColor(colorLiteralRed: 122/255, green: 223/255, blue: 129/255, alpha: 1)
+        
     }
 
     override func viewDidLoad() {
@@ -99,6 +111,10 @@ class BaseGameVC: UIViewController {
         
         // Sets the enter word buttons and fields to be right above the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(BaseGameVC.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        // UI Stuff
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 100, width: 20, height: 20))
+        view.addSubview(activityIndicator)
     }
     
     override func viewWillAppear(_ animated: Bool) {
