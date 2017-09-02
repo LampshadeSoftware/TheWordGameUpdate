@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIReferenceLibraryViewController {
+    
+}
 
 extension String {
     

@@ -31,7 +31,6 @@ class BaseGameView: UIView {
     
     func setup(){
         nibSetup()
-        enterWordTextField.becomeFirstResponder()
     }
     
     func nibSetup(){

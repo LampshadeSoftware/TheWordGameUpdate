@@ -32,6 +32,11 @@ class BaseGameVC: UIViewController {
             let ref: UIReferenceLibraryViewController = UIReferenceLibraryViewController(term: activeGame.getCurrentWord())
             self.present(ref, animated: true, completion: nil)
         }
+        else {
+            let alert = UIAlertController(title: "Could not connect to dicionary", message: "Sorry, we were unable to connect to the dictionary at this time", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
     
     // Functions
@@ -96,7 +101,9 @@ class BaseGameVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(BaseGameVC.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
     
-    override func view
+    override func viewWillAppear(_ animated: Bool) {
+        enterWordTextField.becomeFirstResponder()
+    }
     
     // Makes sure the positions of every element are flush with other elements
     func keyboardWillShow(_ notification: Notification) {
