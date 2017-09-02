@@ -83,6 +83,9 @@ class BaseGameVC: UIViewController {
     func getHint() {
         self.activityIndicator.center = self.sysLog.center
         self.activityIndicator.startAnimating()
+        if sysLog.text?.characters.count != 0 {
+            self.activityIndicator.center.y -= 20
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
             if self.currentHint.characters.count == 0{
                 let numPlays = WordGame.numPlays(on: self.activeGame.getCurrentWord())
@@ -92,7 +95,6 @@ class BaseGameVC: UIViewController {
             self.sysLog.textColor = UIColor(colorLiteralRed: 122/255, green: 223/255, blue: 129/255, alpha: 1)
             self.activityIndicator.stopAnimating()
         }
-        
     }
 
     override func viewDidLoad() {
