@@ -14,7 +14,7 @@ class BaseGameView: UIView {
 
     // Outlets
     @IBOutlet var view: UIView!
-    @IBOutlet weak var lastWord: UILabel!
+    @IBOutlet weak var lastWord: UIButton!
     @IBOutlet weak var currentWord: CurrentWord!
     @IBOutlet weak var enterWordTextField: UITextField!
     @IBOutlet weak var sysLog: UILabel!

@@ -15,7 +15,7 @@ class BaseGameVC: UIViewController {
     // Variables from the BaseGameView
     var baseGameView: BaseGameView!
     var currentWord: CurrentWord!
-    var lastWord: UILabel!
+    var lastWord: UIButton!
     var enterWordTextField: UITextField!
     var sysLog: UILabel!
     
@@ -29,14 +29,16 @@ class BaseGameVC: UIViewController {
     
     // Actions
     func currentWordPressed(_ sender: UITapGestureRecognizer) {
-        if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: activeGame.getCurrentWord()) {
-            let ref: UIReferenceLibraryViewController = UIReferenceLibraryViewController(term: activeGame.getCurrentWord())
-            self.present(ref, animated: true, completion: nil)
-        }
-        else {
-            let alert = UIAlertController(title: "Could not connect to dicionary", message: "Sorry, we were unable to connect to the dictionary at this time", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-            self.present(alert, animated: true)
+        WordGame.showDefinition(forWord: activeGame.getCurrentWord(), VC: self)
+    }
+    func lastWordButtonPressed(button: UIButton){
+        self.performSegue(withIdentifier: "pastWords", sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pastWords" {
+            let destination = segue.destination as! PastWordsTableVC
+            destination.pastWords = activeGame.getUsedWords().reversed()
         }
     }
     
@@ -74,7 +76,7 @@ class BaseGameVC: UIViewController {
                 currentWord.rearrangeLetters(to: playedWord)
             }
             currentHint = ""
-            lastWord.text = activeGame.getLastWord().uppercased()
+            lastWord.setTitle(activeGame.getLastWord().uppercased(), for: .normal)
         }
         sysLog.text = activeGame.errorLog
         sysLog.textColor = UIColor(colorLiteralRed: 223/255, green: 100/255, blue: 96/255, alpha: 1)
@@ -117,6 +119,9 @@ class BaseGameVC: UIViewController {
         // UI Stuff
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 100, width: 20, height: 20))
         view.addSubview(activityIndicator)
+        
+        // Adds action to the last word button
+        lastWord.addTarget(self, action: #selector(lastWordButtonPressed(button:)), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {

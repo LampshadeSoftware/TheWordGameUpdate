@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class WordGame: NSObject {
     
@@ -241,6 +242,13 @@ class WordGame: NSObject {
         }
         return false
     }
+    func getUsedWords() -> [String] {
+        var usedWords: [String] = [String]()
+        for turn in self.turns {
+            usedWords.append(turn.playedWord)
+        }
+        return usedWords
+    }
     func doublePlay(_ play: String, last word: String) -> Bool {
         return WordGame.isValidPlayLite(play, on: word)
     }
@@ -307,6 +315,19 @@ class WordGame: NSObject {
         } catch let error as NSError {
             print(error)
             return ["failed"]
+        }
+    }
+    
+    static func showDefinition(forWord: String, VC: Any) {
+        let view = VC as! UIViewController
+        if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: forWord) {
+            let ref: UIReferenceLibraryViewController = UIReferenceLibraryViewController(term: forWord)
+            view.present(ref, animated: true, completion: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Could not connect to dicionary", message: "Sorry, we were unable to connect to the dictionary at this time", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            view.present(alert, animated: true)
         }
     }
 }

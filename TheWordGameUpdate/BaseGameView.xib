@@ -12,7 +12,7 @@
             <connections>
                 <outlet property="currentWord" destination="eKW-Nz-37U" id="OCL-h7-vpC"/>
                 <outlet property="enterWordTextField" destination="77W-8B-HWt" id="uw0-Aa-sto"/>
-                <outlet property="lastWord" destination="5px-SD-HMA" id="ThR-bh-cdo"/>
+                <outlet property="lastWord" destination="TBA-HT-lV3" id="kh1-S0-nKV"/>
                 <outlet property="sysLog" destination="QEP-5X-BbU" id="ic3-it-Ykk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="49s-2U-3wF"/>
             </connections>
@@ -39,13 +39,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LAST WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5px-SD-HMA">
-                            <rect key="frame" x="0.0" y="12" width="375" height="36"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-HT-lV3">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                            <color key="textColor" red="0.42763751157856017" green="0.52633516626907673" blue="0.72087973736702127" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <state key="normal" title="LAST WORD">
+                                <color key="titleColor" red="0.42745098039215684" green="0.52549019607843139" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.24054903219670878" green="0.29606713964301312" blue="0.40549979470638287" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

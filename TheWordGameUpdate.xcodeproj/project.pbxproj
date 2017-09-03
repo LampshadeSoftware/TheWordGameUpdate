@@ -18,6 +18,7 @@
 		851E81A91F4F4D9400BAF0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851E81A71F4F4D9400BAF0ED /* LaunchScreen.storyboard */; };
 		851E81B41F4F4D9400BAF0ED /* TheWordGameUpdateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E81B31F4F4D9400BAF0ED /* TheWordGameUpdateTests.swift */; };
 		851E81BF1F4F4D9400BAF0ED /* TheWordGameUpdateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851E81BE1F4F4D9400BAF0ED /* TheWordGameUpdateUITests.swift */; };
+		8563DA931F5B9DB900238855 /* PastWordsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8563DA921F5B9DB900238855 /* PastWordsTable.swift */; };
 		856914171F53388400275869 /* ZenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856914161F53388400275869 /* ZenVC.swift */; };
 		856914191F53389000275869 /* TimeTrialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856914181F53389000275869 /* TimeTrialVC.swift */; };
 		8569142A1F53501C00275869 /* BaseGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856914291F53501C00275869 /* BaseGameView.swift */; };
@@ -65,6 +66,7 @@
 		851E81BA1F4F4D9400BAF0ED /* TheWordGameUpdateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheWordGameUpdateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		851E81BE1F4F4D9400BAF0ED /* TheWordGameUpdateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWordGameUpdateUITests.swift; sourceTree = "<group>"; };
 		851E81C01F4F4D9400BAF0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8563DA921F5B9DB900238855 /* PastWordsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWordsTable.swift; sourceTree = "<group>"; };
 		856914161F53388400275869 /* ZenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZenVC.swift; sourceTree = "<group>"; };
 		856914181F53389000275869 /* TimeTrialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTrialVC.swift; sourceTree = "<group>"; };
 		856914291F53501C00275869 /* BaseGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				851E81A01F4F4D9400BAF0ED /* LoginVC.swift */,
 				856914161F53388400275869 /* ZenVC.swift */,
 				856914181F53389000275869 /* TimeTrialVC.swift */,
+				8563DA921F5B9DB900238855 /* PastWordsTable.swift */,
 				8513639A1F5381C800115128 /* BaseGameVC.swift */,
 			);
 			name = Controllers;
@@ -446,6 +449,7 @@
 			files = (
 				8569142A1F53501C00275869 /* BaseGameView.swift in Sources */,
 				8513639B1F5381C800115128 /* BaseGameVC.swift in Sources */,
+				8563DA931F5B9DB900238855 /* PastWordsTable.swift in Sources */,
 				856914191F53389000275869 /* TimeTrialVC.swift in Sources */,
 				851E81A11F4F4D9400BAF0ED /* LoginVC.swift in Sources */,
 				851363991F537D7C00115128 /* Tile.swift in Sources */,
