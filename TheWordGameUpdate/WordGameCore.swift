@@ -214,25 +214,7 @@ class WordGame: NSObject {
     }
     static func isEnglishWord(_ play: String) -> Bool {
         let dict = WordGame.dictionary
-        var hi = dict.count - 1
-        var lo = 0
-        var mid: Int
-        while true {
-            mid = (hi + lo) / 2
-            let guess = dict[mid]
-            if guess == play {
-                return true
-            } else if lo > hi {
-                return false
-            } else {
-                if guess < play {
-                    lo = mid + 1
-                } else { // guess > play
-                    hi = mid - 1
-                }
-            }
-            mid = (hi + lo) / 2
-        }
+        return dict.contains(play)
     }
     func alreadyUsed(_ play: String) -> Bool {
         for turn in self.turns {
@@ -291,14 +273,15 @@ class WordGame: NSObject {
     }
     
     
-    static func generateDictionary() -> [String] {
+    static func generateDictionary() -> Set<String> {
         guard let url = Bundle.main.path(forResource: "dictionary", ofType: "txt") else {
             print("Dictionary not found")
             return ["failed"]
         }
         do {
             let stringFromPath = try String(contentsOfFile: url, encoding: String.Encoding.utf8)
-            return stringFromPath.components(separatedBy: "\r\n")
+            let dic = stringFromPath.components(separatedBy: "\r\n")
+            return Set(dic)
         } catch let error as NSError {
             print(error)
             return ["failed"]
@@ -342,7 +325,7 @@ class Turn: NSObject {
         self.playedByID = playedByID
     }
     
-    func toAnyObject() -> Any{
+    func toAnyObject() -> Any {
         return [
             "playedWord": playedWord,
             "playedByID": playedByID

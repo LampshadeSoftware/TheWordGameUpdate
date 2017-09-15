@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBK-JZ-MsP">
-                                <rect key="frame" x="34" y="219" width="307" height="70.5"/>
+                                <rect key="frame" x="16" y="219" width="343" height="71"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltZ-VD-meC">
-                                <rect key="frame" x="34" y="319" width="307" height="70.5"/>
+                                <rect key="frame" x="16" y="319" width="343" height="71"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
@@ -87,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-KB-Y5s">
-                                <rect key="frame" x="34" y="419" width="307" height="71"/>
+                                <rect key="frame" x="16" y="419" width="343" height="71"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
@@ -150,6 +150,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.16769868900000001" green="0.2064031217" blue="0.28269406580000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ZEN" id="Fid-nD-rMO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="boR-Np-Ck2"/>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="hintButton" destination="LBV-1p-0fl" id="mai-0M-fKo"/>
                         <outlet property="submitButton" destination="Vnl-cL-lTs" id="E4e-vA-dg5"/>
@@ -169,6 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16769868900000001" green="0.2064031217" blue="0.28269406580000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.42763751160000002" green="0.52633516629999999" blue="0.7208797374" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="lMm-Vf-Ikz" customClass="TableViewCell" customModule="TheWordGameUpdate" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="75"/>
@@ -178,7 +184,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDd-yo-0C6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                            <rect key="frame" x="129" y="0.0" width="113" height="74"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                             <state key="normal" title="Button">
@@ -230,6 +236,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1333333333" green="0.15686274510000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="TIME TRIAL" id="Ngx-MK-7eM">
+                        <barButtonItem key="backBarButtonItem" title=" " id="4zI-nP-L1H"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="submitButton" destination="V5S-76-MHQ" id="AaM-JI-El7"/>
                         <segue destination="KAM-uL-z61" kind="show" identifier="pastWords" id="H54-A1-Q8Y"/>
