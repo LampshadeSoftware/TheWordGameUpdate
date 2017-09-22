@@ -10,7 +10,7 @@ import UIKit
 
 // Anything that goes in this class is used in ALL gamemodes
 // RUNS EVERYTHING
-class BaseGameVC: UIViewController {
+class BaseGameVC: UIViewController, UITextFieldDelegate {
     
     // Variables from the BaseGameView
     var baseGameView: BaseGameView!
@@ -41,7 +41,11 @@ class BaseGameVC: UIViewController {
             destination.pastWords = activeGame.getUsedWords().reversed()
         }
     }
-    
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		submit()
+		return true
+	}
+	
     // Functions
     func startGame(){
         if activeGame == nil {
@@ -119,6 +123,8 @@ class BaseGameVC: UIViewController {
         // UI Stuff
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 100, width: 20, height: 20))
         view.addSubview(activityIndicator)
+		enterWordTextField.delegate = self
+		enterWordTextField.becomeFirstResponder()
         
         // Adds action to the last word button
         lastWord.addTarget(self, action: #selector(lastWordButtonPressed(button:)), for: .touchUpInside)
